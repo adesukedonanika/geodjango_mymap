@@ -1,0 +1,2 @@
+# geodjango_mymap
+WebGISをつくる
