@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:12
+  web:
+    build: ./web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./src:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  app:
+    container_name: "geodjango"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: geodjango
+    volumes: 
+        - $PWD:/code
+    tty: true
+
