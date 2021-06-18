@@ -1,0 +1,9 @@
+Django
+numpy
+pandas
+matplotlib
+scikit-learn
+geopandas
+sqlalchemy
+psycopg2
+
