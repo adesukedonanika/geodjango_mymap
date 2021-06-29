@@ -147,3 +147,7 @@ if os.name == 'nt':
     os.environ['PATH'] = OSGEO4W + r"\bin;" + POSTGRES + r"\bin;" + os.environ['PATH']
     
     
+
+# python manage.py migrate
+# django.db.utils.ProgrammingError: 機能拡張"postgis"を作成する権限がありません
+# HINT:  この機能拡張を生成するにはスーパユーザである必要があります。
