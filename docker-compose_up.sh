@@ -1,5 +1,1 @@
-mkdir web
-
-docker-compose run web django-admin startproject mysite .
-
-
+sudo docker-compose run web django-admin startproject composeexample .

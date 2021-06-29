@@ -22,6 +22,10 @@ db一覧を表示
 
 
 
+
+
+
+
 psql -U postgres -d geodjangodb -c "CREATE EXTENSION postgis;"
 ユーザー postgres のパスワード:postgres
 CREATE EXTENSION
@@ -54,3 +58,23 @@ DATABASES = {
 LANGUAGE_CODE = 'ja'
 
 TIME_ZONE = 'Asia/Tokyo'
+
+
+INSTALLED_APPSにmapアプリケーションとGISを追加します。
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+　  'django.contrib.gis',   #追加
+    'map.apps.MapConfig',   #追加
+]
+
+
+
+python manage.py makemigrations
+
+django.core.exceptions.ImproperlyConfigured: Could not find the GDAL library (tried "gdal302", "gdal301", "gdal300", "gdal204", "gdal203", "gdal202", "gdal201", "gdal20"). Is GDAL installed? If it is, try setting GDAL_LIBRARY_PATH in your settings.

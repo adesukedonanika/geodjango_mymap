@@ -1,9 +1,10 @@
-Django
-numpy
-pandas
-matplotlib
-scikit-learn
-geopandas
+Django==3.0.3
+psycopg2==2.8.4
+django-leaflet==0.26.0
 sqlalchemy
-psycopg2
+# psycopg2-binary>=2.8
+# numpy
+# pandas
+# scikit-learn
+# geopandas
 
