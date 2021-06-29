@@ -90,7 +90,7 @@ DATABASES = {
 import os
 if os.name == 'nt':
     import platform
-    POSTGRES = r"C:\Program Files\PostgreSQL\10"
+    POSTGRES = r"C:\Program Files\PostgreSQL\12"
     OSGEO4W = r"C:\OSGeo4W"
     if '64' in platform.architecture()[0]:
         OSGEO4W += "64"
