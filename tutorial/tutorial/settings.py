@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',   #追加
+    'map.apps.MapConfig',   #追加
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,17 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
+DATABASES = {		
+    'default': {		
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',		
+        'NAME': 'geodjangodb',		
+        'USER': 'geo_admin',		
+        'PASSWORD': 'geoadmin',		
+        'HOST': 'localhost',		
+        'PORT':'',		
+    }		
+}		
 
 
 # Password validation
@@ -118,3 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
