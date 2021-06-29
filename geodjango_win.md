@@ -137,3 +137,10 @@ django-admin startproject geodjango
 cd geodjango
 py manage.py startapp world
 
+(geodjango_env) PS C:\Users\adesu\OneDrive\Developper\geodjango\geodjango> py .\manage.py makemigrations
+C:\Users\adesu\OneDrive\Developper\geodjango\geodjango_env\lib\site-packages\django\core\management\commands\makemigrations.py:105: RuntimeWarning: Got an error checking a consistent migration history performed for database connection 'default': fe_sendauth: no password supplied
+
+  warnings.warn(
+Migrations for 'world':
+  world\migrations\0001_initial.py
+    - Create model WorldBorder
