@@ -1,6 +1,7 @@
 Django==3.0.3
 psycopg2==2.8.4
 django-leaflet==0.26.0
+six
 sqlalchemy
 # numpy
 # pandas
